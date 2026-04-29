@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #DEA84B;
+  --color-background: #000000;
+  --color-accent: #1F1F1F;
+  --color-text-main: #FFFFFF;
+
+  /* Inter is loaded via layout.tsx */
+  --font-display: var(--font-inter);
+  --font-body: var(--font-inter);
+  --font-label: var(--font-inter);
+
+  /* Custom breakpoints */
+  --breakpoint-xs: 480px;
+  --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2560px;
+}
+
+@layer base {
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-main);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+
+  /* Gold pill button */
+  .btn-gold {
+    background: #DEA84B;
+    color: #000000;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    outline: none;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+  }
+
+  .btn-gold:hover {
+    opacity: 0.88;
+  }
+
+  .btn-gold:active {
+    transform: scale(0.97);
+  }
+
+  /* Vertical centre line */
+  .centre-line {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.2px;
+    height: 100vh;
+    background-color: var(--color-accent);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Staggered entry animations */
+  .animate-in {
+    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .animate-in-delay {
+    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+  }
+
+  .animate-in-delay-2 {
+    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
