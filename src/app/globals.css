@@ -2,14 +2,34 @@
 
 @theme {
   --color-primary: #DEA84B;
-  --color-background: #000000;
+  --color-background: #170D09;
   --color-accent: #1F1F1F;
   --color-text-main: #FFFFFF;
+
+  /* Additional provided colors */
+  --color-brand-cream: #F8F6EE;
+  --color-brand-beige: #CAC1B4;
+  --color-brand-dark: #17110C;
+  --color-brand-surface: #262626;
+  --color-brand-brown-37: #372B1A;
+  --color-brand-brown-3D: #3D2F1B;
+  --color-brand-brown-42: #42321E;
+  --color-brand-gold-medium: #9A7642;
+  --color-brand-gold-bright: #BF9353;
+
+  --background-image-gold-linear: linear-gradient(90deg, #FCC067 0%, #DB9940 100%);
+  --background-image-hero-dark: linear-gradient(270deg, #715733 0%, #110F0D 100%);
 
   /* Inter is loaded via layout.tsx */
   --font-display: var(--font-inter);
   --font-body: var(--font-inter);
   --font-label: var(--font-inter);
+
+  /* Custom Fonts */
+  --font-bebas-neue: var(--font-bebas-base);
+
+  /* Add SF Pro using native system fonts (it's not a Google Font) */
+  --font-sf-pro: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   /* Custom breakpoints */
   --breakpoint-xs: 480px;
@@ -40,6 +60,16 @@
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
   }
+
+  h1 {
+    font-family: var(--font-bebas-base);
+  }
+
+  h2 {
+    font-family: var(--font-sf-pro);
+  }
+
+  /* other headings default to inter because they inherit from body */
 }
 
 @layer utilities {
@@ -64,7 +94,7 @@
     transform: scale(0.97);
   }
 
-  /* Vertical centre line */
+  /* Vertical centre line - keep for starting page */
   .centre-line {
     position: fixed;
     top: 0;
@@ -88,6 +118,18 @@
 
   .animate-in-delay-2 {
     animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+  }
+
+  /* Landing page specific utilities */
+  .landing-hero-card {
+    background-color: var(--color-brand-dark);
+    border: 2px solid #3B82F6;
+    /* Keeping the blue border from the reference image */
+    border-radius: 8px;
+  }
+
+  .landing-gold-bg {
+    background-image: var(--background-image-gold-linear);
   }
 }
 

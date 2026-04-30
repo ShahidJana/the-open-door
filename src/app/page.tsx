@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-background overflow-hidden flex flex-col">
+    <main className="relative min-h-screen bg-[#000000] overflow-hidden flex flex-col">
       {/* Vertical centre line */}
       <div className="centre-line" />
 
@@ -32,15 +34,17 @@ export default function Home() {
 
         {/* CTA Button */}
         <div className="animate-in-delay-2">
-          <button
-            className="btn-gold font-bold tracking-[0.03em]"
-            style={{
-              fontSize: "clamp(11px, 2vw, 15px)",
-              padding: "clamp(0.5rem, 1.5vw, 1rem) clamp(1.2rem, 4vw, 2.4rem)",
-            }}
-          >
-            Open the Door
-          </button>
+          <Link href="/landing">
+            <button
+              className="btn-gold font-bold tracking-[0.03em]"
+              style={{
+                fontSize: "clamp(11px, 2vw, 15px)",
+                padding: "clamp(0.5rem, 1.5vw, 1rem) clamp(1.2rem, 4vw, 2.4rem)",
+              }}
+            >
+              Open the Door
+            </button>
+          </Link>
         </div>
       </section>
     </main>
