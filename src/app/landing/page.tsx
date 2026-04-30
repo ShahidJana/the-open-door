@@ -120,7 +120,72 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Secure Order Section */}
+      <section className=" max-w-[1440px] mx-auto px-4 py-4 md:px-8 md:py-8 space-y-6">
+        <div className="bg-[#17110C] rounded-2xl border-1 border-[#3D2F1B] overflow-hidden px-8 py-4 md:px-12 md:py-8 flex flex-col lg:flex-row items-center gap-12 relative">
+          <div className="flex-none w-[140px] md:w-[180px] z-10 relative mx-auto lg:mx-0 flex justify-center items-center">
 
+            {/* Large Background Book Cover anchored behind the book */}
+            <div
+              className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-[55%] w-[680px] md:w-[1000px] h-[440px] md:h-[720px] pointer-events-none -z-10 select-none"
+              style={{
+                WebkitMaskImage: 'radial-gradient(ellipse closest-side at center, black 10%, transparent 100%)',
+                maskImage: 'radial-gradient(ellipse closest-side at center, black 10%, transparent 100%)'
+              }}
+            >
+              <Image
+                src="/assets/book-cover.png"
+                alt="Background Cover"
+                fill
+                unoptimized
+                className="object-cover opacity-80 mix-blend-screen blur-[0.5px]"
+              />
+            </div>
+
+            <Image
+              src="/assets/book-image.png"
+              alt="The Open Door Book Cover"
+              width={160}
+              height={240}
+              unoptimized
+              className="w-full h-auto drop-shadow-[0_20px_50px_rgba(222,168,75,0.2)] rounded-sm"
+            />
+          </div>
+
+          <div className="flex-1 space-y-6 z-10">
+            <div className="space-y-4">
+              <h3 className="text-[#9A7642] font-bold text-xs uppercase tracking-[0.3em]">
+                ORDER NOW
+              </h3>
+              <h2 className="text-white font-semibold text-3xl md:text-4xl lg:text-5xl tracking-tight">
+                Continue to the secure order page
+              </h2>
+              <p className="text-[#CAC1B4] text-md md:text-lg">
+                Click below to continue to the official order experience.
+              </p>
+            </div>
+
+            <button className="bg-gradient-to-r from-[#FCC067] to-[#DB9940] text-black px-6 py-3 rounded-full font-bold tracking-wide hover:scale-105 transition-transform shadow-xl">
+              Order Now
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* About Troy Sandifer Section */}
+      <section className=" max-w-[1440px] mx-auto px-4 py-6 md:px-8 md:py-8 space-y-6">
+        <div className="space-y-6 text-left">
+          <h3 className="text-[#9A7642] font-bold text-sm md:text-base uppercase tracking-[0.15em]">
+            ABOUT TROY SANDIFER
+          </h3>
+          <h2 className="text-white font-semibold text-2xl md:text-3xl lg:text-4xl tracking-tighter">
+            A life reclaimed, now helping others rebuild theirs
+          </h2>
+          <p className="text-[#CAC1B4] text-md md:text-lg text-justify leading-relaxed max-w-6xl">
+            Troy Sandifer is the founder and CEO of Hustle Recovery, Inc., a Tennessee-based nonprofit supporting people through recovery housing, treatment, employment, and community connection. His personal journey from incarceration and addiction into leadership, service, and purpose is the heartbeat behind this book.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
