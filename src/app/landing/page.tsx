@@ -78,6 +78,49 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+
+      {/* About the Book Section - Width matched to Hero Card */}
+      <section className="w-full bg-black">
+        <div className=" max-w-[1440px] mx-auto px-4 py-6 md:px-8 md:py-10 space-y-6">
+          <div className="space-y-6">
+            <h3 className="text-[#9A7642] font-bold text-sm md:text-base uppercase tracking-[0.15em]">
+              ABOUT THE BOOK
+            </h3>
+            <h2 className="text-white font-semibold text-2xl md:text-3xl lg:text-4xl tracking-tight">
+              Part memoir. Part guided journal. Fully honest.
+            </h2>
+            <p className="text-[#F8F6EE] text-md md:text-lg w-full text-justify leading-releax tracking-[0.04em]">
+              The <span className="font-black">Open Door</span> blends Troy Sandifer's personal story with guided prompts to help readers reflect on their own recovery journey.
+              It invites you to process pain, identify patterns, and begin writing a different future.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 pt-4">
+            {/* Feature Box 1 - Dark Brown Background */}
+            <div className="bg-[#42321E] rounded-2xl p-4 md:p-6 border border-[#9A7642]/10 flex flex-col justify-center">
+              <h4 className="text-white text-xl md:text-2xl font-semibold mb-4">
+                Stuck in darkness?
+              </h4>
+              <p className="text-[#CAC1B4] text-md md:text-lg text-justify leading-relaxed">
+                When addiction, loss, and shame cloud your future, even one honest step can feel impossible.
+              </p>
+            </div>
+
+            {/* Feature Box 2 - Gold Bordered */}
+            <div className="border-2 border-[#9A7642]/30 bg-[#262626]/20 rounded-2xl p-4 md:p-6 flex flex-col justify-center">
+              <h4 className="text-white text-xl md:text-2xl font-semibold mb-4">
+                There is a door waiting for you.
+              </h4>
+              <p className="text-[#CAC1B4] text-md md:text-lg text-justify leading-relaxed">
+                This book helps you confront your truth, reflect deeply, and move toward recovery with courage and purpose.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
     </div>
   );
 }
