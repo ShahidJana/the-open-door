@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "@/components/Button";
 
 export default function Home() {
   return (
@@ -35,7 +36,7 @@ export default function Home() {
         {/* CTA Button */}
         <div className="animate-in-delay-2">
           <Link href="/landing">
-            <button
+            <Button
               className="btn-gold font-bold tracking-[0.03em]"
               style={{
                 fontSize: "clamp(11px, 2vw, 15px)",
@@ -43,7 +44,7 @@ export default function Home() {
               }}
             >
               Open the Door
-            </button>
+            </Button>
           </Link>
         </div>
       </section>

@@ -1,22 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/Button";
 
 export default function LandingPage() {
   return (
     <div
-      className="min-h-screen bg-background text-white font-inter selection:bg-primary selection:text-black antialiased"
+      className="min-h-screen bg-background text-white font-inter selection:bg-primary selection:text-black antialiased pt-16 md:pt-20"
     >
-      {/* Navbar */}
-      <nav className="w-full bg-[#000000] border-b border-[#3D2F1B] sticky top-0 z-50">
-        <div className="flex justify-between items-center px-2 md:px-8 py-4 max-w-[1440px] mx-auto w-full">
-          <h1 className="text-xl md:text-2xl uppercase">
-            THE OPEN DOOR
-          </h1>
-          <button className="bg-[#DEA84B] text-black px-6 md:px-8 py-2 md:py-3 rounded-full text-xs md:text-sm font-bold tracking-wide hover:bg-[#BF9353] transition-colors shadow-lg">
-            Order Now
-          </button>
-        </div>
-      </nav>
 
       {/* Hero Card - Matching Starting Page Scale */}
       <section className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] py-6 px-4 md:px-8">
@@ -52,11 +42,10 @@ export default function LandingPage() {
                   A raw and honest recovery journey from addiction, loss, and <br className="hidden md:block" /> self-destruction into healing, purpose, and hope.
                 </p>
 
-                {/* Responsive centered button */}
                 <div className="flex justify-center lg:justify-center w-full">
-                  <button className="bg-[#DEA84B] text-black px-8 md:px-10 py-3 md:py-4 rounded-full font-bold tracking-[0.05em] hover:scale-105 transition-transform shadow-2xl text-sm md:text-base lg:text-lg">
+                  <Button className="px-8 md:px-10 py-3 md:py-4 text-sm md:text-base lg:text-lg">
                     Order Now
-                  </button>
+                  </Button>
                 </div>
               </div>
             </div>
@@ -165,9 +154,9 @@ export default function LandingPage() {
               </p>
             </div>
 
-            <button className="bg-gradient-to-r from-[#FCC067] to-[#DB9940] text-black px-6 py-3 rounded-full font-bold tracking-wide hover:scale-105 transition-transform shadow-xl">
+            <Button variant="gradient" className="px-6 py-3">
               Order Now
-            </button>
+            </Button>
           </div>
         </div>
       </section>
