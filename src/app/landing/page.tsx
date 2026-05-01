@@ -4,9 +4,7 @@ import { Button } from "@/components/Button";
 
 export default function LandingPage() {
   return (
-    <div
-      className="min-h-screen bg-background text-white font-inter selection:bg-primary selection:text-black antialiased pt-16 md:pt-20"
-    >
+    <div className="min-h-screen bg-background text-white font-inter selection:bg-primary selection:text-black antialiased pt-16 md:pt-20">
 
       {/* Hero Card - Matching Starting Page Scale */}
       <section className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] py-6 px-4 md:px-8">
@@ -61,6 +59,7 @@ export default function LandingPage() {
                   unoptimized
                   className="rounded-sm drop-shadow-2xl"
                   priority
+                  loading="eager"
                 />
               </div>
             </div>

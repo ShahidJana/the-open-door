@@ -35,17 +35,16 @@ export default function Home() {
 
         {/* CTA Button */}
         <div className="animate-in-delay-2">
-          <Link href="/landing">
-            <Button
-              className="btn-gold font-bold tracking-[0.03em]"
-              style={{
-                fontSize: "clamp(11px, 2vw, 15px)",
-                padding: "clamp(0.5rem, 1.5vw, 1rem) clamp(1.2rem, 4vw, 2.4rem)",
-              }}
-            >
-              Open the Door
-            </Button>
-          </Link>
+          <Button
+            href="/landing"
+            className="btn-gold font-bold tracking-[0.03em]"
+            style={{
+              fontSize: "clamp(11px, 2vw, 15px)",
+              padding: "clamp(0.5rem, 1.5vw, 1rem) clamp(1.2rem, 4vw, 2.4rem)",
+            }}
+          >
+            Open the Door
+          </Button>
         </div>
       </section>
     </main>
